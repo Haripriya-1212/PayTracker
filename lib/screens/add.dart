@@ -1,10 +1,38 @@
 import 'package:flutter/material.dart';
 
+// class AddDriver extends StatefulWidget{
+//   @override
+//   State<AddDriver> createState() => _AddDriverState();
+// }
+
 class AddDriver extends StatelessWidget{
   var nameController = new TextEditingController();
   var contactController = new TextEditingController();
   var dateController = new TextEditingController();
   var upiController = new TextEditingController();
+
+  // DateTime selectedDate = DateTime.now();
+
+  // Future<void> _selectDate(BuildContext context) async {
+  //   final DateTime? picked = await showDatePicker(
+  //       context: context,
+  //       initialDate: selectedDate,
+  //       firstDate: DateTime(2000),
+  //       lastDate: DateTime(2101));
+  //   if (picked != null && picked != selectedDate) {
+  //     setState(() {
+  //       selectedDate = picked;
+  //     });
+  //   }
+  // }
+  // Future<void> _selectDate(BuildContext context) async {
+  //   await showDatePicker(
+  //       context: context,
+  //       initialDate: DateTime.now(),
+  //       firstDate: DateTime(2000),
+  //       lastDate: DateTime(2101));
+  // }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,6 +102,10 @@ class AddDriver extends StatelessWidget{
               hintText: 'Enter date of joining',
               hintStyle: TextStyle(color: Color(0xFF717171))
             ),
+            // readOnly: true,
+            // onTap: () {
+            //   _selectDate(context);
+            // },
         ),
       ),
             Container(
@@ -117,5 +149,4 @@ class AddDriver extends StatelessWidget{
       ),
     );
   }
-  
 }

@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:driver_payments/screens/home.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'dart:async';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
